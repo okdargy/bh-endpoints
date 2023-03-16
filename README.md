@@ -52,6 +52,12 @@ This is a list of all endpoints used by Brick Hill. This list is not complete, a
 | Endpoint | Params | Description | Method | Authentication | Deprecated |
 | --- | --- | --- | --- | --- | --- |
 | [/v1/auth/verifyToken](https://api.brick-hill.com/v1/auth/verifyToken?token=1&host_key=2) | `token: String`<br>`host_key: String` | Verifies a user's game token | **GET** | ❌ | ❌ |
+| [/oauth/clients](https://api.brick-hill.com/oauth/clients) | [See Here](https://laravel.com/docs/10.x/passport#get-oauthclients) | Retrieves a list of owned oAuth clients | **GET** | ✅ | ❌ |
+| [/oauth/clients](https://api.brick-hill.com/oauth/clients) | [See Here](https://laravel.com/docs/10.x/passport#post-oauthclients) | Makes a new oAuth client | **POST** | ✅ | ❌ |
+| [/oauth/clients/{clientId}](https://api.brick-hill.com/oauth/clients/1) | [See Here](https://laravel.com/docs/10.x/passport#put-oauthclientsclient-id) | Updates an oAuth client | **PUT** | ✅ | ❌ |
+| [/oauth/clients/{clientId}](https://api.brick-hill.com/oauth/clients/1) | [See Here](https://laravel.com/docs/10.x/passport#delete-oauthclientsclient-id) | Deletes an oAuth client | **DELETE** | ✅ | ❌ |
+
+
 
 ## Assets
 | Endpoint | Params | Description | Method | Authentication | Deprecated |

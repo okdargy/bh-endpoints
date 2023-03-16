@@ -25,7 +25,7 @@ This is a list of all endpoints used by Brick Hill. This list is not complete, a
 | [/v1/user/{userId}/crate](https://api.brick-hill.com/v1/user/1/crate) | `userId: Integer` | Retrieves a list of all items a user owns | **GET** | ❌ | ❌ |
 | [/v1/user/{userId}/owns/{itemId}](https://api.brick-hill.com/v1/user/1/owns/1) | `userId: Integer`<br>`itemId: Integer` | Retrieves whether a user owns an item or not | **GET** | ❌ | ❌ |
 | [/v1/user/{userId}/value](https://api.brick-hill.com/v1/user/1/value) | `userId: Integer` | Retrieves a user's value, calculated daily | **GET** | ❌ | ❌ |
-| [/api/settings/username?u=*](https://www.brick-hill.com/api/settings/username?u=1) | `u: String` | Retrieves whether a username is taken or not | **GET** | ❌ | ❌ |
+| [/api/settings/username](https://www.brick-hill.com/api/settings/username?u=1) | `u: String` | Retrieves whether a username is taken or not | **GET** | ❌ | ❌ |
 
 ## Shop
 | Endpoint | Params | Description | Method | Authentication | Deprecated |

@@ -1,22 +1,68 @@
 # Brick Hill Endpoints
-All Brick Hill endpoints, in one place.
+This is a list of all endpoints used by Brick Hill. This list is not complete, and will be updated as more endpoints are found.
 
-## Endpoints
-| Endpoint | Params | Description | Method | Authentication Required | Deprecated |
+>**[WARNING]** Some endpoints do not use [api.brick-hill.com](https://api.brick-hill.com) but rather [www.brick-hill.com](https://www.brick-hill.com)
+
+## Table of Contents
+- [Endpoints](#endpoints)
+  - [User](#user)
+  - [Shop](#shop)
+  - [Sets](#sets)
+  - [Trading](#trading)
+  - [Authentication](#authentication)
+  - [Assets](#assets)
+- [Contributing](#contributing)
+- [Links](#links)
+
+# Endpoints<br>
+## User
+| Endpoint | Params | Description | Method | Authentication | Deprecated |
 | --- | --- | --- | --- | --- | --- |
+| [/settings/data](https://www.brick-hill.com/settings/data) | `None` | Retrieves the signed in user's setting data | **GET** | ✅ | ❌ |
+| [/v1/user/profile](https://api.brick-hill.com/v1/user/profile) | `None` | Retrieves a user's profile information | **GET** | ❌ | ❌ |
+| [/v1/user/id](https://api.brick-hill.com/v1/user/id) | `None` | Retrieves a user's id from their username | **GET** | ❌ | ❌ |
 | [/v1/games/retrieveAvatar](https://api.brick-hill.com/v1/games/retrieveAvatar?id=1) | `id: Integer` | Retrieves an avatar information | **GET** | ❌ | ❌ |
-| [/v1/sets/{setId}](https://api.brick-hill.com/v1/sets/1) | `setId: Integer` | Retrieves a set information | **GET** | ❌ | ❌ |
+| [/v1/user/{userId}/crate](https://api.brick-hill.com/v1/user/1/crate) | `userId: Integer` | Retrieves a list of all items a user owns | **GET** | ❌ | ❌ |
+| [/v1/user/{userId}/owns/{itemId}](https://api.brick-hill.com/v1/user/1/owns/1) | `userId: Integer`<br>`itemId: Integer` | Retrieves whether a user owns an item or not | **GET** | ❌ | ❌ |
+| [/v1/user/{userId}/value](https://api.brick-hill.com/v1/user/1/value) | `userId: Integer` | Retrieves a user's value, calculated daily | **GET** | ❌ | ❌ |
+| [/api/settings/username?u=*](https://www.brick-hill.com/api/settings/username?u=1) | `u: String` | Retrieves whether a username is taken or not | **GET** | ❌ | ❌ |
+
+## Shop
+| Endpoint | Params | Description | Method | Authentication | Deprecated |
+| --- | --- | --- | --- | --- | --- |
 | [/v1/shop/list](https://api.brick-hill.com/v1/shop/list) | `None` | Retrieves a list of all items in the shop | **GET** | ❌ | ❌ |
 | [/v1/shop/{itemId}](https://api.brick-hill.com/v1/shop/1) | `itemId: Integer` | Retrieves an item information | **GET** | ❌ | ❌ |
 | [/v1/shop/{itemId}/owners](https://api.brick-hill.com/v1/shop/1/owners) | `itemId: Integer` | Retrieves a list of all users who own an item | **GET** | ❌ | ❌ |
 | [/v1/shop/{itemId}/resellers](https://api.brick-hill.com/v1/shop/1/resellers) | `itemId: Integer` | Retrieves a list of all users who resell an item | **GET** | ❌ | ❌ |
-| [/v1/user/trades/{userId}/{type}](https://api.brick-hill.com/v1/user/trades/1/selling) | `userId: Integer`<br>`type: String` | Retrieves a list of all trades a user has | **GET** | ❌ | ❌ |
-| [/v1/user/trades/{tradeId}](https://api.brick-hill.com/v1/user/trades/1) | `tradeId: Integer` | Retrieves a trade information | **GET** | ❌ | ❌ |
-| [/v1/user/profile](https://api.brick-hill.com/v1/user/profile) | `None` | Retrieves a user's profile information | **GET** | ❌ | ❌ |
-| [/v1/user/id](https://api.brick-hill.com/v1/user/id) | `None` | Retrieves a user's id from their username | **GET** | ❌ | ❌ |
-| [/v1/user/{userId}/crate](https://api.brick-hill.com/v1/user/1/crate) | `userId: Integer` | Retrieves a list of all items a user owns | **GET** | ❌ | ❌ |
-| [/v1/user/{userId}/owns/{itemId}](https://api.brick-hill.com/v1/user/1/owns/1) | `userId: Integer`<br>`itemId: Integer` | Retrieves whether a user owns an item or not | **GET** | ❌ | ❌ |
-| [/v1/user/{userId}/value](https://api.brick-hill.com/v1/user/1/value) | `userId: Integer` | Retrieves a user's value, calculated daily | **GET** | ❌ | ❌ |
+
+## Sets
+| Endpoint | Params | Description | Method | Authentication | Deprecated |
+| --- | --- | --- | --- | --- | --- |
+| [/v1/sets/{setId}](https://api.brick-hill.com/v1/sets/1) | `setId: Integer` | Retrieves a set information | **GET** | ❌ | ❌ |
+| [/v1/games/postServer](https://api.brick-hill.com/v1/games/postServer) | `?` | Retrieves a list of all servers | **POST** | ❌ | ❌ |
+
+## Trading
+| Endpoint | Params | Description | Method | Authentication | Deprecated |
+| --- | --- | --- | --- | --- | --- |
+| [/v1/user/trades/{userId}/{type}](https://api.brick-hill.com/v1/user/trades/1/selling) | `userId: Integer`<br>`type: String` | Retrieves a list of all trades a user has | **GET** | ✅ | ❌ |
+| [/v1/user/trades/{tradeId}](https://api.brick-hill.com/v1/user/trades/1) | `tradeId: Integer` | Retrieves a trade information | **GET** | ✅ | ❌ |
+
+## Authentication
+| Endpoint | Params | Description | Method | Authentication | Deprecated |
+| --- | --- | --- | --- | --- | --- |
+| [/v1/auth/verifyToken](https://api.brick-hill.com/v1/auth/verifyToken?token=1&host_key=2) | `token: String`<br>`host_key: String` | Verifies a user's game token | **GET** | ❌ | ❌ |
+
+## Assets
+| Endpoint | Params | Description | Method | Authentication | Deprecated |
+| --- | --- | --- | --- | --- | --- |
+| [/v1/assets/getPoly/{assetId}](https://api.brick-hill.com/v1/assets/getPoly/1) | `assetId: Integer` | Retrieves the asset's texture and mesh | **GET** | ❌ | ❌ |
+| [/v1/assets/get/{assetId}](https://api.brick-hill.com/v1/assets/get/1) | `assetId: Integer` | Retrieves an texture or mesh | **GET** | ❌ | ❌ |
+| [/v1/user/render/process](https://api.brick-hill.com/v1/user/render/process) | `?` | Renders a user's avatar | **POST** | ✅ | ❌ |
+| [/v1/thumbnails/bulk](https://api.brick-hill.com/v1/thumbnails/bulk) | `?` | Retrieves a list of specified thumbnails | **POST** | ❌ | ❌ |
+| [/v1/thumbnails/single](https://api.brick-hill.com/v1/thumbnails/single?type=1&id=2) | `type: String`<br>`id: Integer` | Retrieves a thumbnail based off query | **GET** | ❌ | ❌ |
+
+## Contributing
+To contribute to this repository, please fork it and make a pull request. All contributions are appreciated.
 
 ## Links
 - [API Documentation](https://api.brick-hill.com/docs)

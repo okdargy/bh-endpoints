@@ -20,8 +20,8 @@ This is a list of all endpoints used by Brick Hill. This list is not complete, a
 | Endpoint | Params | Description | Method | Authentication | Deprecated |
 | --- | --- | --- | --- | --- | --- |
 | [/settings/data](https://www.brick-hill.com/settings/data) | `None` | Retrieves the signed in user's setting data | **GET** | ✅ | ❌ |
-| [/v1/user/profile](https://api.brick-hill.com/v1/user/profile) | `None` | Retrieves a user's profile information | **GET** | ❌ | ❌ |
-| [/v1/user/id](https://api.brick-hill.com/v1/user/id) | `None` | Retrieves a user's id from their username | **GET** | ❌ | ❌ |
+| [/v1/user/profile](https://api.brick-hill.com/v1/user/profile) | `id: Integer` | Retrieves a user's profile information | **GET** | ❌ | ❌ |
+| [/v1/user/id](https://api.brick-hill.com/v1/user/id) | `username: String` | Retrieves a user's id from their username | **GET** | ❌ | ❌ |
 | [/v1/games/retrieveAvatar](https://api.brick-hill.com/v1/games/retrieveAvatar?id=1) | `id: Integer` | Retrieves an avatar information | **GET** | ❌ | ❌ |
 | [/v1/user/{userId}/crate](https://api.brick-hill.com/v1/user/1/crate) | `userId: Integer` | Retrieves a list of all items a user owns | **GET** | ❌ | ❌ |
 | [/v1/user/{userId}/owns/{itemId}](https://api.brick-hill.com/v1/user/1/owns/1) | `userId: Integer`<br>`itemId: Integer` | Retrieves whether a user owns an item or not | **GET** | ❌ | ❌ |

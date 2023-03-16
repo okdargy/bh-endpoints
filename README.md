@@ -40,7 +40,7 @@ This is a list of all endpoints used by Brick Hill. This list is not complete, a
 | Endpoint | Params | Description | Method | Authentication | Deprecated |
 | --- | --- | --- | --- | --- | --- |
 | [/v1/sets/{setId}](https://api.brick-hill.com/v1/sets/1) | `setId: Integer` | Retrieves a set information | **GET** | ❌ | ❌ |
-| [/v1/games/postServer](https://api.brick-hill.com/v1/games/postServer) | `?` | Retrieves a list of all servers | **POST** | ❌ | ❌ |
+| [/v1/games/postServer](https://api.brick-hill.com/v1/games/postServer) | `?` | Sends server to games page | **POST** | ❌ | ❌ |
 
 ## Trading
 | Endpoint | Params | Description | Method | Authentication | Deprecated |

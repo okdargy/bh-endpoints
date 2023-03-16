@@ -11,6 +11,7 @@ This is a list of all endpoints used by Brick Hill. This list is not complete, a
   - [Trading](#trading)
   - [Authentication](#authentication)
   - [Assets](#assets)
+  - [Staff](#staff)
 - [Contributing](#contributing)
 - [Links](#links)
 
@@ -60,6 +61,11 @@ This is a list of all endpoints used by Brick Hill. This list is not complete, a
 | [/v1/user/render/process](https://api.brick-hill.com/v1/user/render/process) | `?` | Renders a user's avatar | **POST** | ✅ | ❌ |
 | [/v1/thumbnails/bulk](https://api.brick-hill.com/v1/thumbnails/bulk) | `?` | Retrieves a list of specified thumbnails | **POST** | ❌ | ❌ |
 | [/v1/thumbnails/single](https://api.brick-hill.com/v1/thumbnails/single?type=1&id=2) | `type: String`<br>`id: Integer` | Retrieves a thumbnail based off query | **GET** | ❌ | ❌ |
+
+## Staff
+| Endpoint | Params | Description | Method | Authentication | Deprecated |
+| --- | --- | --- | --- | --- | --- |
+| [/v1/events/ingameRedeem](https://api.brick-hill.com/v1/events/ingameRedeem) | `user: Integer`<br>`item: Integer` | Grants in-game items to a user | **POST** | ✅ | ❌ |
 
 ## Contributing
 To contribute to this repository, please fork it and make a pull request. All contributions are appreciated.

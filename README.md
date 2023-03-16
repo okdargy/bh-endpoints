@@ -78,3 +78,4 @@ To contribute to this repository, please fork it and make a pull request. All co
 
 ## Links
 - [API Documentation](https://api.brick-hill.com/docs)
+- [Laravel Documentation](https://laravel.com/docs/10.x/passport)d

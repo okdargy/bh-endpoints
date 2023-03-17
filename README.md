@@ -40,6 +40,7 @@ This is a list of all endpoints used by Brick Hill. This list is not complete, a
 | Endpoint | Params | Description | Method | Authentication | Deprecated |
 | --- | --- | --- | --- | --- | --- |
 | [/v1/sets/{setId}](https://api.brick-hill.com/v1/sets/1) | `setId: Integer` | Retrieves a set information | **GET** | ❌ | ❌ |
+| [/v1/sets/list](https://api.brick-hill.com/v1/sets/list) | `None` | Retrieves a list of all sets | **GET** | ❌ | ❌ |
 | [/v1/games/postServer](https://api.brick-hill.com/v1/games/postServer) | `?` | Sends server to games page | **POST** | ❌ | ❌ |
 
 ## Trading
@@ -78,4 +79,4 @@ To contribute to this repository, please fork it and make a pull request. All co
 
 ## Links
 - [API Documentation](https://api.brick-hill.com/docs)
-- [Laravel Documentation](https://laravel.com/docs/10.x/passport)d
+- [Laravel Documentation](https://laravel.com/docs/10.x/passport)

@@ -1,7 +1,7 @@
 # Brick Hill Endpoints
 This is a list of all endpoints used by Brick Hill. This list is not complete, and will be updated as more endpoints are found.
 
->**[WARNING]** Some endpoints do not use [api.brick-hill.com](https://api.brick-hill.com) but rather [www.brick-hill.com](https://www.brick-hill.com)
+> **Warning** Some endpoints do not use [api.brick-hill.com](https://api.brick-hill.com) but rather [www.brick-hill.com](https://www.brick-hill.com)
 
 ## Table of Contents
 - [Endpoints](#endpoints)
